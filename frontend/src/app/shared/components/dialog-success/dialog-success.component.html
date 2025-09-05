@@ -1,0 +1,26 @@
+<div class="min-w-[300px] text-center text-[#676a6c]">
+  <mat-dialog-content>
+    <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-6 text-[#00995d]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-[44px] h-[44px] mx-auto">
+          <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/>
+        </svg>
+
+        <p class="text-[20px]">Concluído!</p>
+      </div>
+
+      @if(data.length > 0) {
+        <div class="flex flex-col gap-2">
+          @for(item of data; track $index) {
+            <p class="text-[16px]">{{ item }}</p>
+          }
+        </div>
+      }
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <div class="w-full text-center">
+      <button class="button w-fit" mat-dialog-close>Ok</button>
+    </div>
+  </mat-dialog-actions>
+</div>

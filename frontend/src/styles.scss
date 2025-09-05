@@ -1,0 +1,117 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+@use 'tailwindcss';
+
+@use './theme-lead-gray-colors' as lead-gray-theme;
+@use './theme-dark-green-colors' as dark-green-theme;
+
+@use './theme-orange-colors' as orange-theme;
+@use './theme-purple-colors' as purple-theme;
+
+@use './theme-violet-colors' as violet-theme;
+@use './theme-muss-green-colors' as muss-green-theme;
+
+@use './theme-brown-colors' as brown-theme;
+@use './theme-emerald-colors' as emerald-theme;
+
+html.lead-gray-theme {
+  color-scheme: light;
+  @include mat.theme((
+    color: (
+      theme-type: color-scheme,
+      primary: lead-gray-theme.$primary-palette,
+      tertiary: lead-gray-theme.$tertiary-palette,
+    )
+  ));
+}
+
+
+html.dark-green-theme {
+  color-scheme: light;
+  @include mat.theme((
+    color: (
+      theme-type: color-scheme,
+      primary: dark-green-theme.$primary-palette,
+      tertiary: dark-green-theme.$tertiary-palette,
+    )
+  ));
+}
+
+html.orange-theme {
+  color-scheme: light;
+  @include mat.theme((
+    color: (
+      theme-type: color-scheme,
+      primary: orange-theme.$primary-palette,
+      tertiary: orange-theme.$tertiary-palette,
+    )
+  ));
+}
+
+// Tema Roxo
+html.purple-theme {
+  color-scheme: light;
+  @include mat.theme((
+    color: (
+      theme-type: color-scheme,
+      primary: purple-theme.$primary-palette,
+      tertiary: purple-theme.$tertiary-palette,
+    )
+  ));
+}
+
+// Adicione o mesmo padrão para os outros temas
+html.violet-theme {
+  color-scheme: light;
+  @include mat.theme((
+    color: (
+      theme-type: color-scheme,
+      primary: violet-theme.$primary-palette,
+      tertiary: violet-theme.$tertiary-palette,
+    )
+  ));
+}
+
+html.muss-green-theme {
+  color-scheme: light;
+  @include mat.theme((
+    color: (
+      theme-type: color-scheme,
+      primary: muss-green-theme.$primary-palette,
+      tertiary: muss-green-theme.$tertiary-palette,
+    )
+  ));
+}
+
+html.brown-theme {
+  color-scheme: light;
+  @include mat.theme((
+    color: (
+      theme-type: color-scheme,
+      primary: brown-theme.$primary-palette,
+      tertiary: brown-theme.$tertiary-palette,
+    )
+  ));
+}
+
+html.emerald-theme {
+  color-scheme: light;
+  @include mat.theme((
+    color: (
+      theme-type: color-scheme,
+      primary: emerald-theme.$primary-palette,
+      tertiary: emerald-theme.$tertiary-palette,
+    )
+  ));
+}
+
+html.dark-mode {
+  color-scheme: dark;
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

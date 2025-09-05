@@ -1,0 +1,10 @@
+<mat-list>
+    <div mat-subheader>Folders</div>
+    @for (notification of notifications; track notification) {
+        <mat-list-item>
+            <mat-icon matListItemIcon>notification</mat-icon>
+            <div matListItemTitle>({{ notification.mensagemId }}) - {{ notification.conteudoMensagem }}</div>
+            <div matListItemLine>{{ notification.status }}</div>
+        </mat-list-item>
+    }
+</mat-list>
